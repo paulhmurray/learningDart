@@ -79,3 +79,52 @@ temporary variables
 allows you to force the type using the 'as' keyword
 
 ## Functions
+
+
+## List
+
+List inherits from an iterable. 
+
+`List<int> list = [1,2,3,4]`
+
+Others include;
+- List
+- Map
+- Set
+
+the angle brackets '<>' are used to define the generic type, if you want to define a type
+access an element in an array using the [] and the index location
+Some basic notation:
+- list.length
+- list.last
+- list.first
+
+### combine two lists using the spread syntax:
+
+`var combined = [...list1, ...list2];
+combined.forEach(print); //this will print each element in the new combined list
+
+### Conditions in Lists
+
+If you want to only make a value available on a certain condition you can use an if statement
+
+e.g.
+`bool depressed = false;`
+var cart = [
+'milk'
+'eggs'
+if (depressed) 'Vodka'
+];
+
+This will only display Vodka if and when the bool value depressed is true
+
+### Map
+
+Key value pair
+
+Takes generic types for the key and the value:
+
+`Map<String, dynamic> book = {
+'title': 'Moby Dick',
+'author' 'Herman Melville'
+};`
