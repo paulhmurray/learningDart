@@ -80,14 +80,47 @@ allows you to force the type using the 'as' keyword
 
 ## Functions
 
+`String takeFive() {
+    return '';
+}`
+this is a string function
+to call the function and pass in a value
+
+`namedFunction(a: 23);`
+this calls a function called namedFunction and passes in 23 as the value for 'a'
+
+We create a function tha texpects arguments to be passed in, if we want to make
+a certain argument mandatory to be passed in, we use the keywork 'required'
+
+### Arrow Functions
+
+Passing functions as arguments, you can use an arrow function to keep the
+function all on one line.
+
+`
+someFunction(int number) => '$number' minus ten equals ${number - 10};
+someFunction(23);
+
+//this returns '23 minus ten equals 13'
+`
+
+### Anonymous functions
+
+`aFunction(
+() => 'Hello Kitty'
+);`
+
+to use an anonymous function we just use parentheses without naming it, like
+the above code
 
 ## List
 
-List inherits from an iterable. 
+List inherits from an iterable.
 
 `List<int> list = [1,2,3,4]`
 
 Others include;
+
 - List
 - Map
 - Set
@@ -95,11 +128,12 @@ Others include;
 the angle brackets '<>' are used to define the generic type, if you want to define a type
 access an element in an array using the [] and the index location
 Some basic notation:
+
 - list.length
 - list.last
 - list.first
 
-### combine two lists using the spread syntax:
+### combine two lists using the spread syntax
 
 `var combined = [...list1, ...list2];
 combined.forEach(print); //this will print each element in the new combined list
@@ -129,7 +163,6 @@ Takes generic types for the key and the value:
 'author' 'Herman Melville'
 };`
 
-
 if you want to access the values in a list, you can simply use the toList method:
 
 `book.values.toList();`
@@ -140,7 +173,8 @@ However, more often than not, we won't use Map to create an object, but rather a
 ## Classes
 
 ### Intro
-`class` this is a keyword to create a class. 
+
+`class` this is a keyword to create a class.
 Followed by the name of the class, a class should always start with an Uppercase letter and in camel case
 
 `class Basic {
@@ -153,32 +187,54 @@ Followed by the name of the class, a class should always start with an Uppercase
 if you want to pass a value, you need to declare a variable to be passed and use the keyword
 'this'
 
+First class objects
+They can be assigned to variables and returned from other functions
+
+no function keyword
+
+decide on a name and () {}
+
 e.g.
 
+`String takeFive() {
+return '';
+}`
+this is a string function
+
+to call the function and pass in a value:
+
+`namedFunction(a: 23);`
+This calls a function called namedFunction and passes in 23 as the value for 'a'
+
+We creating a function that expects arguments to be passed in, if we want to
+make a certain argument mandatory to be passed in, we use the keyword 'required'
+
+e.g.
 `
 void main() {
-    Basic thing = Basic(55);
-    thing.id;
-    thing.doStuff();
+Basic thing = Basic(55);
+thing.id;
+thing.doStuff();
 }
 //class definition
 class Basic {
-    int id;
-    Basic(this.id);
-    doStuff() {
-        print("Hello my ID is $id");
-    }
+int id;
+Basic(this.id);
+doStuff() {
+print("Hello my ID is $id");
+}
 
     static helper(){
-    
+
     }
+
 }
 `
 now since Basic can take an argument, we can send in a value to that argument
 
 ### Static methods
 
-Operate globally. 
+Operate globally.
 Use the static keyword in the class definition
 
 - [ ] create a few classes
@@ -192,37 +248,35 @@ e.g.
 
 `
 class Rectangle {
-    final int width; //the final means it can't be re-assigned
-    final int height;
-    String? name;
-    late final int area;//it is late, as the value won't be assigned until after the calculations
+final int width; //the final means it can't be re-assigned
+final int height;
+String? name;
+late final int area;//it is late, as the value won't be assigned until after the calculations
 
     Rectangle(this.width, this.helper, [this.name]) {
     area = width * height;
     }
+
 }
 `
 
 [ ] get this code to run
 `
 class Point {
-  double lat = 0;
-  double lng = 0;
+double lat = 0;
+double lng = 0;
 
-  // Named constructor
-  Point.fromMap(Map data) {
-    lat = data['lat'];
-    lng = data['lng'];
-  }
+// Named constructor
+Point.fromMap(Map data) {
+lat = data['lat'];
+lng = data['lng'];
+}
 
-  Point.fromList(List data) {
-    lat = data[0];
-    lng = data[1];
-  }
+Point.fromList(List data) {
+lat = data[0];
+lng = data[1];
+}
 }
 
 var p1 = Point.fromMap({'lat': 23, 'lng': 50});
 var p2 = Point.fromList([23, 50]);
-
-`
-
