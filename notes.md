@@ -128,3 +128,101 @@ Takes generic types for the key and the value:
 'title': 'Moby Dick',
 'author' 'Herman Melville'
 };`
+
+
+if you want to access the values in a list, you can simply use the toList method:
+
+`book.values.toList();`
+Here we can see the name of the map is book, values is stating we want to access the values and not the keys, and it sends those values to a list
+
+However, more often than not, we won't use Map to create an object, but rather a class.
+
+## Classes
+
+### Intro
+`class` this is a keyword to create a class. 
+Followed by the name of the class, a class should always start with an Uppercase letter and in camel case
+
+`class Basic {
+
+//stuff
+}`
+
+### instance variables
+
+if you want to pass a value, you need to declare a variable to be passed and use the keyword
+'this'
+
+e.g.
+
+`
+void main() {
+    Basic thing = Basic(55);
+    thing.id;
+    thing.doStuff();
+}
+//class definition
+class Basic {
+    int id;
+    Basic(this.id);
+    doStuff() {
+        print("Hello my ID is $id");
+    }
+
+    static helper(){
+    
+    }
+}
+`
+now since Basic can take an argument, we can send in a value to that argument
+
+### Static methods
+
+Operate globally. 
+Use the static keyword in the class definition
+
+- [ ] create a few classes
+
+### constructors
+
+this is how we construct the object
+if we want to build out a Rectangle class to hold dimensions and area:
+
+e.g.
+
+`
+class Rectangle {
+    final int width; //the final means it can't be re-assigned
+    final int height;
+    String? name;
+    late final int area;//it is late, as the value won't be assigned until after the calculations
+
+    Rectangle(this.width, this.helper, [this.name]) {
+    area = width * height;
+    }
+}
+`
+
+[ ] get this code to run
+`
+class Point {
+  double lat = 0;
+  double lng = 0;
+
+  // Named constructor
+  Point.fromMap(Map data) {
+    lat = data['lat'];
+    lng = data['lng'];
+  }
+
+  Point.fromList(List data) {
+    lat = data[0];
+    lng = data[1];
+  }
+}
+
+var p1 = Point.fromMap({'lat': 23, 'lng': 50});
+var p2 = Point.fromList([23, 50]);
+
+`
+
