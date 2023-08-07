@@ -280,3 +280,25 @@ lng = data[1];
 
 var p1 = Point.fromMap({'lat': 23, 'lng': 50});
 var p2 = Point.fromList([23, 50]);
+
+A class is a blueprint of an object.
+every object in dart is an instance of a clas
+
+class UpperCamelCase {
+
+}
+
+to use a class, create a variable with the type being the class.
+
+e.g.
+
+you have a class called Basic, so create a new variable of type Basic.
+Typically when we create a variable like Name, we give it a type String.
+
+e.g
+
+    ```Dart
+    String name = "Paul";
+    ```
+
+when i don't care about the variable type, is to use the 'var' keyword
