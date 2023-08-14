@@ -251,7 +251,8 @@ class Rectangle {
 final int width; //the final means it can't be re-assigned
 final int height;
 String? name;
-late final int area;//it is late, as the value won't be assigned until after the calculations
+late final int area;//it is late, as the value won't be assigned until after the
+calculations
 
     Rectangle(this.width, this.helper, [this.name]) {
     area = width * height;
@@ -260,11 +261,13 @@ late final int area;//it is late, as the value won't be assigned until after the
 }
 `
 
-[ ] get this code to run
-`
-class Point {
-double lat = 0;
-double lng = 0;
+- [ ] get this code to run
+
+  ```Dart
+    class Point {
+    double lat = 0;
+    double lng = 0;
+  ```
 
 // Named constructor
 Point.fromMap(Map data) {
@@ -280,6 +283,8 @@ lng = data[1];
 
 var p1 = Point.fromMap({'lat': 23, 'lng': 50});
 var p2 = Point.fromList([23, 50]);
+
+    ```
 
 A class is a blueprint of an object.
 every object in dart is an instance of a clas
@@ -302,3 +307,11 @@ e.g
     ```
 
 when i don't care about the variable type, is to use the 'var' keyword
+
+A constructor is just a function that is run once, when the object is first
+created.
+
+Keyword is 'this'
+
+If you want to pass data into a class, you define a function with the same name
+as the class
