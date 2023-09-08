@@ -5,7 +5,7 @@ class Person {
   Person(this.name, this.age); 
 }
 
-void main() {
+void main () {
   Person person = Person("Alice", 25);
   print("Name: ${person.name}, Age: ${person.age}");
 }

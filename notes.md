@@ -263,11 +263,9 @@ calculations
 
 - [ ] get this code to run
 
-  ```Dart
-    class Point {
-    double lat = 0;
-    double lng = 0;
-  ```
+      class Point {
+      double lat = 0;
+      double lng = 0;
 
 // Named constructor
 Point.fromMap(Map data) {
